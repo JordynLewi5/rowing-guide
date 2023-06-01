@@ -1,0 +1,131 @@
+/* BODY */
+.sport-of-rowing {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* box-shadow: 0px 0px 10px -5px var(--primary-black); */
+}
+
+.rowing-stroke {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* box-shadow: 0px 0px 30px 5px var(--primary-black); */
+}
+
+.boat-classes {
+    justify-content: space-between;
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+    /* margin-left: 200px;
+    margin-right: 200px; */
+    /* box-shadow: 0px 0px 30px 5px var(--primary-black); */
+}
+
+.boat-class-item {
+    margin-bottom: 20px;
+    height: 475px;
+    justify-content: space-between;
+}
+
+.boat-class-item p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.top-image-landing-page img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+}
+
+/* CONTENT */
+#boat-classes-content,
+#sport-of-rowing-middle-content,
+.boat-classes-content {
+    display: flex;
+    flex-direction: row;
+}
+
+#sport-of-rowing-middle-content {
+    gap: 5%;
+    overflow-wrap: normal;
+}
+
+#boat-classes-middle-content {
+    justify-content: center;
+}
+
+/* BOAT CLASSES */
+.boat-classes-two-column-table {
+    /* background-color: var(--pearl-light); */
+    color: var(--primary-black);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    /* margin: 10px; */
+    /* margin-top: 20px; */
+    border-radius: 2px;
+    min-width: 320px;
+    background-color: none;
+}
+
+.boat-classes-list-column {
+    text-align: center;
+    width: 350px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.boat-classes-list-column img {
+    width:  100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#boat-classes-column-scull {
+    background-color: #EEE;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 6px #000;
+
+}
+#boat-classes-column-sweep {
+    background-color: #EEE;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 6px #000;
+
+}
+/* PANELS */
+.sport-of-rowing-left-panel {
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.sport-of-rowing-right-panel {
+    width: 50%;
+    height: fit-content;
+}
+
+.sport-of-rowing-right-panel img {
+    width: 100%;
+}
+
+/* IMAGES */
+.rowing-stroke .middle-content img,
+
+
+
+.boat-classes-title-uppercase {
+    font-size: 2em;
+}
+
+.boat-class-item h4 {
+    margin: 0px;
+}

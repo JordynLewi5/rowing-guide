@@ -1,0 +1,45 @@
+/* PAGE STRUCTURE */
+.FAQ-page {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+/* QUESTION STYLING */
+.Question p::before {
+    content: "Question:";
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* ANSWER STYLING */
+.Answer p::before {
+    content: "Answer:";
+    font-weight: bold;
+    margin-right: 10px;
+}
+.Answer .answer-paragraph::before {
+    content: "Answer:";
+    font-weight: bold;
+    margin-right: 10px;
+}
+.Answer .answer-paragraph p::before {
+    content: "";
+    margin-right: 0px;
+}
+/* QA CONTAINER */
+.QA {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 9px;
+    background-color: #151515;
+    border-radius: 5px;
+    box-shadow: 0 0px 5px 0px rgba(0,0,0);
+}
+
+/* PARAGRAPH STYLING */
+.FAQ-page p {
+    font-size: 1em;
+}
