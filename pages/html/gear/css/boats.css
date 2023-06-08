@@ -1,0 +1,26 @@
+.boats-page {
+    display: flex;
+    flex-direction: row;
+}
+.sculling {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.sculling img {
+    width: 30px;
+    height: auto;
+}
+
+.sculling img:hover {
+}
+
+.left-arrow {
+    background-image: url("media/images/left-arrow.png");
+    /* background-color: #000; */
+    width: 30px;
+    height: auto;
+
+}

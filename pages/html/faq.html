@@ -6,7 +6,7 @@
         <meta name="description" content="Project 1 description">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/faq.css">
-        <link rel="stylesheet" href="../css/shared.css">
+        <link rel="stylesheet" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\global-styles\shared.css">
 
     </head>
     <body>
@@ -16,13 +16,23 @@
                 <h3 class="uppercase">Rowing Guide</h3>
             </div>
             <nav class="header-nav">
-                <ul class="header-nav-list">
-                    <li><a class="home-nav" href="home.html">Home</a></li>
-                    <li><a class="faq-nav" href="faq.html">FAQ</a></li>
-                    <li><a class="contact-nav" href="contact.html">Contact</a></li>
-               </ul>
+                <div class="header-nav-list">
+                    <a class="nav-item" id="home-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\home.html">Home</a>
+                    <a class="nav-item" id="faq-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\faq.html">FAQ</a>
+                    <div class="gear-nav-dropdown">
+                        <div class="gear-nav-top">
+                            <a class="nav-item" id="gear-nav">Gear</a>
+                        </div>
+                        <div class="gear-nav-bottom">
+                            <a id="boats-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\gear\html\boats.html">Boats</a>
+                            <a id="oars-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\gear\html\oars.html">Oars</a>
+                        </div>
+                    </div>
+                    <a class="nav-item" id="contact-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\contact.html">Contact</a>
+                </div>
             </nav>
         </header>
+
         <!-- End of Header -->
         <!-- Start of FAQ body -->
         <div class="body">
@@ -103,5 +113,27 @@
             </ul>
         </footer>
         <!-- End of Footer -->
+
+        <!--------------------------------------------------------------->
+        <!-- SCRIPTS ---------------------------------------------------->
+        <!--------------------------------------------------------------->
+
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+        <!-- Code -->
+        <script>
+            $('.QA').click(function(event) {
+                    $(this).find('.Answer').toggleClass('show');
+                });
+            $('.gear-nav-dropdown').on('mouseenter', function() {
+                $('.gear-nav-bottom').toggleClass('show');
+                $('.gear-nav-top').toggleClass('show');
+
+            })
+            .on('mouseleave', function() {
+                $('.gear-nav-bottom').toggleClass('show');
+                $('.gear-nav-top').toggleClass('show');
+            }) 
+        </script>
     </body>
 </html>
