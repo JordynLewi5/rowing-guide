@@ -1,0 +1,26 @@
+.oar-page {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh
+}
+
+.oar-header {
+    color: var(--primary-black);
+}
+
+.oar-icon {
+    width: 1300px;
+    height: auto;
+    margin-bottom: 60px;
+}
+.oar-diagram {
+    margin-top: 60px;
+    border-bottom: 1px solid var(--primary-black);
+}
+.oar-interactive {
+    /* background-color: #d9d8dd; */
+    border-radius: 8px;
+    /* padding: 40px; */
+    color: var(--primary-black);
+    text-align: center;
+}

@@ -4,7 +4,7 @@
     flex-direction: row;
     margin-top: 20px;
     margin-bottom: 20px;
-    /* box-shadow: 0px 0px 10px -5px var(--primary-black); */
+    /* box-shadow: 0px 0px 10px -5px var(--pearl-light); */
 }
 
 .rowing-stroke {
@@ -12,7 +12,7 @@
     flex-direction: row;
     margin-top: 20px;
     margin-bottom: 20px;
-    /* box-shadow: 0px 0px 30px 5px var(--primary-black); */
+    /* box-shadow: 0px 0px 30px 5px var(--pearl-light); */
 }
 
 .boat-classes {
@@ -30,10 +30,33 @@
     margin-top: 20px;
 }
 
-.top-image-landing-page img {
+/* .top-image-landing-page img {
     width: 100%;
     height: auto;
     border-radius: 0px;
+    margin-top: -114px;
+    transform: translateY(-1px);
+    position: absolute;
+    z-index:-1;
+} */
+.top-image-landing-page {
+    /* margin-top: -514px; */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("file:///C:/Users/jlewi/OneDrive/Desktop/Kinetic%20Projects/Project%201/media/images/riggers.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    z-index: -1;
+}
+.body {
+    /* top: 10rem; */
+    z-index: 0;
+    margin-top: 100vh;
+    padding-top: 0px !important;
 }
 
 /* CONTENT */
@@ -55,8 +78,7 @@
 
 /* BOAT CLASSES */
 .boat-classes-two-column-table {
-    /* background-color: var(--pearl-light); */
-    color: var(--primary-black);
+    /* background-color: var(--primary-black); */
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -130,14 +152,23 @@
     margin: 0px;
     min-width: 250px;
     width: 100%;
+    color: var(--primary-black);
+
 }
 
 .boat-classes-column-title {
+    color: var(--primary-black);
     padding: 20px;
 }
 
 .boat-classes-column {
     margin: 5px;
+    
+}
+.boat-classes-item p {
+    margin: 5px;
+    color: var(--primary-black);
+
 }
 
 .boat-class-item h4 {
