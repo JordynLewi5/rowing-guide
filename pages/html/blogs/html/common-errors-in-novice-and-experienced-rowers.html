@@ -5,8 +5,9 @@
         <title>Project 1</title>
         <meta name="description" content="Project 1 description">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/blog.css">
+        <link rel="stylesheet" href="../css/blogs.css">
         <link rel="stylesheet" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\global-styles\shared.css">
+
     </head>
     <body>
         <!-- Start of Header -->
@@ -32,32 +33,37 @@
                 </div>
             </nav>
         </header>
-
         <!-- End of Header -->
-        <!-- Start of Blog body -->
+        <!-- Start of Contact body -->
         <div class="body">
-            <div class="blog-page">
+            <div class="blogs-page">
                 <div class="left-sidebar"></div>
-                <!-- Blog List Section -->
+
                 <div class="middle-content">
-                    <h1 class="uppercase">Blog</h1>
-                    <h3>Recent Blogs</h3>
-                    <ul class="blog-list">
-                        <li><a href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\blogs\html\introduction-to-rowing-technique.html">Introduction to Rowing Technique</a></li>
-                        <hr>
-                        <li><a href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\blogs\html\common-errors-in-novice-and-experienced-rowers.html">Common Errors in Novice and Experienced Rowers</a></li>
-                        <hr>
-                        <li><a href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\blogs\html\drills-for-improving-rowing-technique.html">Drills for Improving Rowing Technique</a></li>
-                        <hr>
-                        <li><a href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\blogs\html\rowing-equipment.html">Rowing Equipment</a></li>
-                        <hr>
-                        <li><a href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\blogs\html\how-to-make-adjustments-to-boat-rigging.html">How to Make Adjustments to Boat Rigging</a></li>
-                    </ul>
+                    <div class="contact-header">
+                        <h1 class="uppercase">Common Errors</h1>
+                    </div>
+                    <div class="blogs-body">
+                        <img src="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\media\images\common-errors.jpg" style="width:100%">
+                        <h3>Handle Heights (on the water)</h3>
+                        <p>When rowing on the water, the height at which your rowers hold the handles is extremely important as it determines the stability and balance of the boat. If the boat is not balanced, it will list to one side, forcing the oars to drag across the water. One way to manage this is to have your rowers imagine they are gliding their hands across a tabletop.</p>
+                        <h3>Early Back Swing (on the erg and water)</h3>
+                        <p>Swinging your back early brings with it a lot of problems relating to efficiency and injury. In an ideal stroke, you maintain your body structure while pressing your legs down. Roughly 60% of the power from each stroke comes right from the legs, which means we want this to be as undisturbed as possible while maintaining fluid transitions between the phases of the stroke. It is important to avoid swinging your back too early as it compromises the structure, increases the load on your back, and can cause injuries. Swinging early can also cause muscle recruitment inhibition, limiting the force the legs can produce. Emphasize patience during the stroke and wait until the legs are almost down before swinging your back.</p>
+                        <h3>Bending the Arms Too Early</h3>
+                        <p>You would never deadlift with your arms bent, so don’t bend your arms during the leg drive. Bending your arms too early drastically cuts your power output, causing fatigue and faster burnout.</p>
+                        <h3>Missing the Catch</h3>
+                        <p>The rower begins the drive phase before fully placing the blade into the water. This is a very common issue that leads to inefficient strokes, where the rower will entirely miss the most important part of the stroke, the catch. Missing the catch impacts the power and speed of the boat, timing with other rowers, and the set of the boat.</p>
+                        <h3>Tight Shoulders During the Drive</h3>
+                        <p>Rowers often engage their shoulders to restrict movement during the drive. However, engaging the shoulders causes the blades to bury in the water and puts excessive load on the shoulders. Instead, it is better to use the lats to support the arms during the drive.</p>
+                        <h3>Rushing (on the water)</h3>
+                        <p>Rushing occurs when rowers become out of sync and catch too early. Rushing creates instability and inefficiency in rowing. It's important for all rowers in the boat to move together to capitalize on the stroke's jerkiness. Emphasize this to your rowers, explaining how the recovery actually moves the boat faster due to conservation of momentum, and when pressing down for the stroke, the boat wants to slow down.</p>
+                    </div>
                 </div>
-                <!-- End of Blog List Section -->
+
                 <div class="right-sidebar"></div>
             </div>
         </div>
+        <!-- End of Contact body -->
         <!-- Start of Footer -->
         <footer class="default-footer">
             <ul>
@@ -66,14 +72,7 @@
             </ul>
         </footer>
         <!-- End of Footer -->
-
-        <!--------------------------------------------------------------->
-        <!-- SCRIPTS ---------------------------------------------------->
-        <!--------------------------------------------------------------->
-
         <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-
-        <!-- Code -->
         <script>
             $(document).ready(function() {
                 let prevScrollPos = $(window).scrollTop();
@@ -89,9 +88,6 @@
                     }
                 });
             });
-            $('.QA').click(function(event) {
-                    $(this).find('.Answer').toggleClass('show');
-                });
             $('.gear-nav-dropdown').on('mouseenter', function() {
                 $('.gear-nav-bottom').toggleClass('show');
                 $('.gear-nav-top').toggleClass('show');
@@ -101,6 +97,7 @@
                 $('.gear-nav-bottom').toggleClass('show');
                 $('.gear-nav-top').toggleClass('show');
             }) 
+            
         </script>
     </body>
 </html>

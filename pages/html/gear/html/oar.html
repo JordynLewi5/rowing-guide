@@ -13,7 +13,7 @@
         <!-- Start of Header -->
         <header class="default-header">
             <div class="header-logo">
-                <h2 class="uppercase">Rowing Guide</h2>
+                <img src="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\media\images\rowing guide logo white intersection-min.png" style="margin-left:-40px;margin-right:40px">
             </div>
             <nav class="header-nav">
                 <div class="header-nav-list">
@@ -57,6 +57,7 @@
                                 <area class="oarmap-area" id="vortex-tip" shape="rect" coords="1280.5,0,1300,128.7" alt="vortex-tip">
                             </map>
                         </div>
+                        <hr>
                         <div class="oars-information">
                             <div id="handle-info" class="oar-information">
                                 <h2>Handle</h2>
@@ -115,11 +116,24 @@
             $('#handle-info').show();
 
             $('.oarmap-area').on('mouseenter', function() {
-                console.log('entered')
                 $('.oar-information').hide();
                 $(`#${$(this).attr('id')}-info`).show();
             });
             // End of Oar Diagram
+            $(document).ready(function() {
+                let prevScrollPos = $(window).scrollTop();
+                let headerHideMargin = 120;
+                $(window).on("scroll", function() {
+                    let currentScrollPos = $(window).scrollTop();
+                    if (currentScrollPos - prevScrollPos < -headerHideMargin) {
+                        $(".default-header").css("top", "0");
+                        prevScrollPos = currentScrollPos;
+                    } else if (currentScrollPos - prevScrollPos > headerHideMargin) {
+                        $(".default-header").css("top", "-114px");
+                        prevScrollPos = currentScrollPos;
+                    }
+                });
+            });
             // Gear Nav
             $('.gear-nav-dropdown').on('mouseenter', function() {
                 $('.gear-nav-bottom').toggleClass('show');

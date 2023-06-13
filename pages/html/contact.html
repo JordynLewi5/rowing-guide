@@ -13,7 +13,7 @@
         <!-- Start of Header -->
         <header class="default-header">
             <div class="header-logo">
-                <h2 class="uppercase">Rowing Guide</h2>
+                <img src="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\media\images\rowing guide logo white intersection-min.png" style="margin-left:-40px;margin-right:40px">
             </div>
             <nav class="header-nav">
                 <div class="header-nav-list">
@@ -69,6 +69,20 @@
         <!-- End of Footer -->
         <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
         <script>
+            $(document).ready(function() {
+                let prevScrollPos = $(window).scrollTop();
+                let headerHideMargin = 120;
+                $(window).on("scroll", function() {
+                    let currentScrollPos = $(window).scrollTop();
+                    if (currentScrollPos - prevScrollPos < -headerHideMargin) {
+                        $(".default-header").css("top", "0");
+                        prevScrollPos = currentScrollPos;
+                    } else if (currentScrollPos - prevScrollPos > headerHideMargin) {
+                        $(".default-header").css("top", "-114px");
+                        prevScrollPos = currentScrollPos;
+                    }
+                });
+            });
             $('.gear-nav-dropdown').on('mouseenter', function() {
                 $('.gear-nav-bottom').toggleClass('show');
                 $('.gear-nav-top').toggleClass('show');
@@ -78,6 +92,7 @@
                 $('.gear-nav-bottom').toggleClass('show');
                 $('.gear-nav-top').toggleClass('show');
             }) 
+            
         </script>
     </body>
 </html>

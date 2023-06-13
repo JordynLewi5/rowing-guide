@@ -5,8 +5,9 @@
         <title>Project 1</title>
         <meta name="description" content="Project 1 description">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/blog.css">
+        <link rel="stylesheet" href="../css/blogs.css">
         <link rel="stylesheet" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\global-styles\shared.css">
+
     </head>
     <body>
         <!-- Start of Header -->
@@ -32,32 +33,29 @@
                 </div>
             </nav>
         </header>
-
         <!-- End of Header -->
-        <!-- Start of Blog body -->
+        <!-- Start of Contact body -->
         <div class="body">
-            <div class="blog-page">
+            <div class="blogs-page">
                 <div class="left-sidebar"></div>
-                <!-- Blog List Section -->
+
                 <div class="middle-content">
-                    <h1 class="uppercase">Blog</h1>
-                    <h3>Recent Blogs</h3>
-                    <ul class="blog-list">
-                        <li><a href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\blogs\html\introduction-to-rowing-technique.html">Introduction to Rowing Technique</a></li>
-                        <hr>
-                        <li><a href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\blogs\html\common-errors-in-novice-and-experienced-rowers.html">Common Errors in Novice and Experienced Rowers</a></li>
-                        <hr>
-                        <li><a href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\blogs\html\drills-for-improving-rowing-technique.html">Drills for Improving Rowing Technique</a></li>
-                        <hr>
-                        <li><a href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\blogs\html\rowing-equipment.html">Rowing Equipment</a></li>
-                        <hr>
-                        <li><a href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\blogs\html\how-to-make-adjustments-to-boat-rigging.html">How to Make Adjustments to Boat Rigging</a></li>
-                    </ul>
+                    <div class="contact-header">
+                        <h1 class="uppercase">How to Make Adjustments to Boat Rigging</h1>
+                    </div>
+                    <div class="blogs-body">
+                        <h2>What can be Adjusted?</h2>
+                        <p>There are number of components that can be adjusted to better suit a specific rower. Oarlock spacers, footstretcher tracks, footstretcher heights, rigger spanning, rigger setting, seat track displacement, oar collars, and oar handle lengths can all be adjust.</p>
+                        <h2>General Guidelines</h2>
+                        <p>When it comes to making changes to boat, there are a few guidelines to follow. Most adjustments are made based off height, leg length, shoulder span, wing span, etc. For taller people, you generally want the footstretchers to be further away to account for longer legs, oarlocks to be positioned further out to account for wider shoulders, more spacers underneath the oarlocks for higher shoulders, lower shoes, and seat tracks to be moved back to account for longer leg drive.</p>
+                        <img src="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\media\images\rigger.jpg" alt="Boat Rigging" style="width:100%">
+                    </div>
                 </div>
-                <!-- End of Blog List Section -->
+
                 <div class="right-sidebar"></div>
             </div>
         </div>
+        <!-- End of Contact body -->
         <!-- Start of Footer -->
         <footer class="default-footer">
             <ul>
@@ -66,14 +64,7 @@
             </ul>
         </footer>
         <!-- End of Footer -->
-
-        <!--------------------------------------------------------------->
-        <!-- SCRIPTS ---------------------------------------------------->
-        <!--------------------------------------------------------------->
-
         <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-
-        <!-- Code -->
         <script>
             $(document).ready(function() {
                 let prevScrollPos = $(window).scrollTop();
@@ -89,9 +80,6 @@
                     }
                 });
             });
-            $('.QA').click(function(event) {
-                    $(this).find('.Answer').toggleClass('show');
-                });
             $('.gear-nav-dropdown').on('mouseenter', function() {
                 $('.gear-nav-bottom').toggleClass('show');
                 $('.gear-nav-top').toggleClass('show');
@@ -101,6 +89,7 @@
                 $('.gear-nav-bottom').toggleClass('show');
                 $('.gear-nav-top').toggleClass('show');
             }) 
+            
         </script>
     </body>
 </html>

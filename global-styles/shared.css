@@ -1,20 +1,23 @@
 /* COLOR VARIABLES */
 :root {
-    --primary-black: #222227;
+    --primary-black: #17171a;
     --secondary-gold: #FED600;
     --secondary-gold-dark: #f19c1c;
-    --secondary-blue: #073678;
-    --secondary-blue-dark: #052465;
+    --secondary-blue: #070766;
+    --secondary-blue-dark: #020024;
     --pearl-light: #f2eeee;
 }
 
 /* TYPOGRAPHY */
+@font-face {
+    font-family: bahnschrift;
+    src: url(https://fonts.cdnfonts.com/css/bahnschrift);
+}
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Helvetica, Arial, sans-serif;
+    font-family: 'bahnschrift','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Helvetica, Arial, sans-serif;
     margin: 0px;
     overflow: scroll;
     overflow-x: hidden;
-    background-color: var(--pearl-light);
     height: 100%;
 }
 h1 {
@@ -35,14 +38,14 @@ h4 + p {
 }
 
 p {
-    font-size: 1.15em;
+    font-size: 1.1em;
     line-height: 1.5;
 }
 
 /* OTHER STYLES */
-img {
+/* img {
     border-radius: 5px;
-}
+} */
 
 a {
     color: cyan;
@@ -57,10 +60,10 @@ a {
     justify-content: space-between;
     bottom: 0;
     width: 100%;
-    background: var(--secondary-blue);
+    background: var(--secondary-blue-dark);
     padding: 80px;
     flex-shrink: 0;
-    color: var(--pearl-light)
+    color: var(--pearl-light);
 }
 
 .default-footer ul {
@@ -79,15 +82,16 @@ a {
 }
 
 .left-sidebar {
-    width: 12%;
+    width: 20%;
 }
 
 .right-sidebar {
-    width: 12%;
+    width: 20%;
 }
 
 .middle-content {
-    width: 76%;
+    width: 60%;
+    /* padding-bottom: -10px; */
 }
 
 .section {
@@ -96,13 +100,14 @@ a {
 
 /* SECTION HEADERS */
 .section-headers {
-    background-color: var(--secondary-blue);
+    background: linear-gradient(90deg, #0d0d3f 25%, #070746 30%, #070534 60%,#21123a 87%);
     color: var(--pearl-light);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 0px 30px 5px #111;
+    z-index: 1;
 }
 
 .section-headers-uppercase {
@@ -145,15 +150,16 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: var(--secondary-blue-dark);
-    opacity: 90%;
+    background: linear-gradient(90deg, #080839e9 10%, #08084c 30%, #020024 80%,#150d23 95%);
+    opacity: 98%;
     box-shadow: 0px 0px 20px 3px #111;
     height: 114px;
     z-index: 1;
     color: var(--pearl-light);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.4s;
 
 }
 
@@ -167,13 +173,51 @@ a {
     border-bottom-right-radius: 100px;
 }
 
-#header-logo {
-    color: var(--pearl-light);
-    overflow-wrap: normal;
-    font-size: 20px;
-    
-}
 
+
+
+@media (min-width: 768px) {
+    .header-logo img {
+        width: 200px;
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    .left-sidebar {
+        width: 10%;
+    }
+    .right-sidebar {
+        width: 10%;
+    }
+    .default-header {
+        height: 80px;
+    }
+    .header-logo img {
+        width: fit-content;
+        padding-left: 40px;
+    }
+    .header-logo img {
+        width: 130px;
+        height: auto;
+    }
+    .default-header {
+        font-size: 13px;
+    }
+    #sport-of-rowing-middle-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        margin-left: 25%;
+        margin-right: 0%;
+    }
+    .sport-of-rowing-left-panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: -10px;
+    }
+}
 .nav-item {
     padding-top: 5px;
     padding-bottom: 5px; 
@@ -249,4 +293,14 @@ a {
 #oar-nav {
     /* border-bottom-left-radius: 10px; */
     border-bottom-right-radius: 10px; 
+}
+
+
+.middle-content:before {
+    box-shadow: -15px 0 15px -15px inset !important;
+    left: -15px;
+}
+.middle-content:after {
+    box-shadow: 15px 0 15px -15px inset;
+    right: -15px;
 }
