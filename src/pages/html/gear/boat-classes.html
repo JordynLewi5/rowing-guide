@@ -5,31 +5,31 @@
         <title>Project 1</title>
         <meta name="description" content="Project 1 description">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/boat-classes.css">
-        <link rel="stylesheet" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\global-styles\shared.css">
+        <link rel="stylesheet" href="/src/pages/css/boat-classes.css">
+        <link rel="stylesheet" href="/src/pages/css/shared.css">
 
     </head>
     <body>
         <!-- Start of Header -->
         <header class="default-header">
             <div class="header-logo">
-                <img src="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\media\images\rowing guide logo white intersection-min.png" style="margin-left:-40px;margin-right:40px">
+                <a class="nav-item" id="home-nav" href="/src/pages/html/home.html"><img src="/src/media/images/rowing guide logo white intersection.png" style="margin-left:-40px;margin-right:40px"></a>
             </div>
             <nav class="header-nav">
                 <div class="header-nav-list">
-                    <a class="nav-item" id="home-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\home.html">Home</a>
-                    <a class="nav-item" id="faq-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\faq.html">FAQ</a>
+                    <a class="nav-item" id="home-nav" href="/src/pages/html/home.html">Home</a>
+                    <a class="nav-item" id="faq-nav" href="/src/pages/html/faq.html">FAQ</a>
                     <div class="gear-nav-dropdown">
                         <div class="gear-nav-top">
                             <a class="nav-item" id="gear-nav">Gear</a>
                         </div>
                         <div class="gear-nav-bottom">
-                            <a id="boats-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\gear\html\boat-classes.html">Boats Classes</a>
-                            <a id="oar-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\gear\html\oar.html">The Oar</a>
+                            <a id="boats-nav" href="/src/pages/html/gear/boat-classes.html">Boats Classes</a>
+                            <a id="oar-nav" href="/src/pages/html/gear/oar.html">The Oar</a>
                         </div>
                     </div>
-                    <a class="nav-item" id="blog-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\blog.html">Blog</a>
-                    <a class="nav-item" id="contact-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\contact.html">Contact</a>
+                    <a class="nav-item" id="blog-nav" href="/src/pages/html/blog.html">Blog</a>
+                    <a class="nav-item" id="contact-nav" href="/src/pages/html/contact.html">Contact</a>
                 </div>
             </nav>
         </header>
@@ -47,14 +47,14 @@
                       <!--  -->
                     <div class="carousel">
                         <div class="carousel-image-panel">                            
-                            <img class="carousel-image" id="carousel-image-left" src="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\media\images\boat6.jpg">
-                            <img class="carousel-image" id="carousel-image-center" src="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\media\images\boat1.jpg">
-                            <img class="carousel-image"id="carousel-image-right" src="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\media\images\boat2.jpg">
+                            <img class="carousel-image" id="carousel-image-left" src="/src/media/images/boat6.jpg">
+                            <img class="carousel-image" id="carousel-image-center" src="/src/media/images/boat1.jpg">
+                            <img class="carousel-image"id="carousel-image-right" src="/src/media/images/boat2.jpg">
 
                         </div>
                         <div class="carousel-controller-panel">
-                            <button class="carousel-button" id="carousel-button-left"><image src="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\media\images\left-arrow.png"></button>
-                            <button class="carousel-button" id="carousel-button-right"><image src="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\media\images\right-arrow.png"></button>
+                            <button class="carousel-button" id="carousel-button-left"><image src="/src/media/images/left-arrow.png"></button>
+                            <button class="carousel-button" id="carousel-button-right"><image src="/src/media/images/right-arrow.png"></button>
                         </div>
                     </div>
                     <div class="boat-information-divs">
@@ -128,7 +128,7 @@
         <!-- SCRIPTS ---------------------------------------------------->
         <!--------------------------------------------------------------->
 
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="/src/scripts/jquery.js"></script>
 
         <!-- Code -->
         <script>
@@ -138,10 +138,6 @@
             // Reset the boat info descriptions
             $('.boat-information').hide();
             $(`#${carouselIndex}-info`).show();
-        
-            // Boat Descriptions
-
-            // End of Boat Descriptions
 
             // Carousel
             $('#carousel-button-left, #carousel-image-left').click(function() {
@@ -172,26 +168,26 @@
                 });
             });
             $('.gear-nav-dropdown').on('mouseenter', function() {
-                $('.gear-nav-bottom').toggleClass('show');
-                $('.gear-nav-top').toggleClass('show');
+                $('.gear-nav-bottom').addClass('show');
+                $('.gear-nav-top').addClass('show');
 
             })
             .on('mouseleave', function() {
-                $('.gear-nav-bottom').toggleClass('show');
-                $('.gear-nav-top').toggleClass('show');
+                $('.gear-nav-bottom').removeClass('show');
+                $('.gear-nav-top').removeClass('show');
             }) 
             // End of Header
 
             // Functions
             function updateCarouselImage() {                
                 // update left image
-                let imagePath = 'C:/Users/jlewi/OneDrive/Desktop/Kinetic Projects/Project 1/media/images/boat' + (carouselIndex > 1 ? carouselIndex - 1 : imageCount) + '.jpg';
+                let imagePath = '/src/media/images/boat' + (carouselIndex > 1 ? carouselIndex - 1 : imageCount) + '.jpg';
                 $('#carousel-image-left').attr('src', imagePath);
                 // update center image
-                imagePath = 'C:/Users/jlewi/OneDrive/Desktop/Kinetic Projects/Project 1/media/images/boat' + carouselIndex + '.jpg';
+                imagePath = '/src/media/images/boat' + carouselIndex + '.jpg';
                 $('#carousel-image-center').attr('src', imagePath);
                 // update right image
-                imagePath = 'C:/Users/jlewi/OneDrive/Desktop/Kinetic Projects/Project 1/media/images/boat' + (carouselIndex < 6 ? carouselIndex + 1 : 1) + '.jpg';
+                imagePath = '/src/media/images/boat' + (carouselIndex < 6 ? carouselIndex + 1 : 1) + '.jpg';
                 $('#carousel-image-right').attr('src', imagePath);
             }
 

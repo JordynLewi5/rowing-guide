@@ -5,31 +5,31 @@
         <title>Project 1</title>
         <meta name="description" content="Project 1 description">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/blogs.css">
-        <link rel="stylesheet" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\global-styles\shared.css">
+        <link rel="stylesheet" href="/src/pages/css/blogs.css">
+        <link rel="stylesheet" href="/src/pages/css/shared.css">
 
     </head>
     <body>
         <!-- Start of Header -->
         <header class="default-header">
             <div class="header-logo">
-                <img src="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\media\images\rowing guide logo white intersection-min.png" style="margin-left:-40px;margin-right:40px">
+                <a class="nav-item" id="home-nav" href="/src/pages/html/home.html"><img src="/src/media/images/rowing guide logo white intersection.png" style="margin-left:-40px;margin-right:40px"></a>
             </div>
             <nav class="header-nav">
                 <div class="header-nav-list">
-                    <a class="nav-item" id="home-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\home.html">Home</a>
-                    <a class="nav-item" id="faq-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\faq.html">FAQ</a>
+                    <a class="nav-item" id="home-nav" href="/src/pages/html/home.html">Home</a>
+                    <a class="nav-item" id="faq-nav" href="/src/pages/html/faq.html">FAQ</a>
                     <div class="gear-nav-dropdown">
                         <div class="gear-nav-top">
                             <a class="nav-item" id="gear-nav">Gear</a>
                         </div>
                         <div class="gear-nav-bottom">
-                            <a id="boats-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\gear\html\boat-classes.html">Boats Classes</a>
-                            <a id="oar-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\gear\html\oar.html">The Oar</a>
+                            <a id="boats-nav" href="/src/pages/html/gear/boat-classes.html">Boats Classes</a>
+                            <a id="oar-nav" href="/src/pages/html/gear/oar.html">The Oar</a>
                         </div>
                     </div>
-                    <a class="nav-item" id="blog-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\blog.html">Blog</a>
-                    <a class="nav-item" id="contact-nav" href="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\pages\html\contact.html">Contact</a>
+                    <a class="nav-item" id="blog-nav" href="/src/pages/html/blog.html">Blog</a>
+                    <a class="nav-item" id="contact-nav" href="/src/pages/html/contact.html">Contact</a>
                 </div>
             </nav>
         </header>
@@ -40,11 +40,13 @@
                 <div class="left-sidebar"></div>
 
                 <div class="middle-content">
-                    <div class="contact-header">
+                    <div class="blogs-header">
+                        <p><a href="/src/pages/html/blog.html">Back to Blogs</a></p>
+                        <p>June 16, 2023 | By Jordyn Lewis</p>
                         <h1 class="uppercase">Introduction to Rowing Technique</h1>
                     </div>
                     <div class="blogs-body">
-                        <img src="C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\media\images\technique.jpg" style="width:100%">
+                        <img src="/src/media/images/technique.jpg" style="width:100%">
                         <h2>The Sequence</h2>
                         <p>The rowing stroke consists of different phases. It starts at the catch position where the rower's knees are bent, shins vertical, body leaned forward, and arms extended forward with oar blades in the water.</p>
                         <p>From there, the rower initiates the drive phase. They begin by explosively pushing with their legs, extending them fully. As the legs finish extending, the rower swings their torso backward from the hips while maintaining a straight back. This transfers the power from the legs to the upper body. Finally, the rower pulls the oar handle towards their body using their arms and shoulders, propelling the boat forward.</p>
@@ -129,32 +131,12 @@
             </ul>
         </footer>
         <!-- End of Footer -->
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                let prevScrollPos = $(window).scrollTop();
-                let headerHideMargin = 120;
-                $(window).on("scroll", function() {
-                    let currentScrollPos = $(window).scrollTop();
-                    if (currentScrollPos - prevScrollPos < -headerHideMargin) {
-                        $(".default-header").css("top", "0");
-                        prevScrollPos = currentScrollPos;
-                    } else if (currentScrollPos - prevScrollPos > headerHideMargin) {
-                        $(".default-header").css("top", "-114px");
-                        prevScrollPos = currentScrollPos;
-                    }
-                });
-            });
-            $('.gear-nav-dropdown').on('mouseenter', function() {
-                $('.gear-nav-bottom').toggleClass('show');
-                $('.gear-nav-top').toggleClass('show');
+        <script src="/src/scripts/jquery.js"></script>
+        <!-- Code -->
+        <script src="/src/scripts/dropdown-nav.js"></script>
+        <script src="/src/scripts/scroll-to-top.js"></script>
 
-            })
-            .on('mouseleave', function() {
-                $('.gear-nav-bottom').toggleClass('show');
-                $('.gear-nav-top').toggleClass('show');
-            }) 
-            
+        <script>            
         </script>
     </body>
 </html>

@@ -1,11 +1,11 @@
 /* PAGE STRUCTURE */
 .FAQ-page {
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     display: flex;
     flex-direction: row;
-    min-height: 100%;
-    margin-bottom: 46%;
+    min-height: 64.25vh;
+    /* margin-bottom: 46%; */
 }
 .FAQ-header {
     color: var(--primary-black);
@@ -44,7 +44,7 @@
     margin-bottom: 10px;
     background-color: var(--primary-black);
     border-radius: 5px;
-    box-shadow: 0 0px 5px 0px rgba(0,0,0);
+    box-shadow: 0 0px 5px 0px #111111bc;
 }
 
 /* PARAGRAPH STYLING */

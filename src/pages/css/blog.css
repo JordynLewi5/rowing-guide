@@ -1,7 +1,7 @@
 .blog-page {
     display: flex;
     flex-direction: row;
-    min-height: 100vh;
+    min-height: 64.25vh;
 }
 
 ul {

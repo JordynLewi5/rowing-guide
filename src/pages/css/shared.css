@@ -74,11 +74,11 @@ a {
 .body {
     background-color: var(--pearl-light);
     /* color: var(--primary-black); */
-    padding-top: 114px;
+    padding-top: 130px;
     display: block;
     justify-content: space-around;
     flex: 1;
-    min-height: 90vh;
+    min-height: 64.25vh;
 }
 
 .left-sidebar {
@@ -106,7 +106,7 @@ a {
     padding-bottom: 40px;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 30px 5px #111;
+    box-shadow: 0px 0px 10px 3px #1111117f;
     z-index: 1;
 }
 
@@ -119,6 +119,8 @@ a {
 }
 .uppercase {
     text-transform: uppercase;
+    padding: 0px;
+    margin-top: 0px;
 }
 
 
@@ -152,14 +154,14 @@ a {
     justify-content: space-around;
     background: linear-gradient(90deg, #080839e9 10%, #08084c 30%, #020024 80%,#150d23 95%);
     opacity: 98%;
-    box-shadow: 0px 0px 20px 3px #111;
+    box-shadow: 0px 0px 10px 3px #1111117f;
     height: 114px;
     z-index: 1;
     color: var(--pearl-light);
     position: fixed;
     top: 0;
     width: 100%;
-    transition: top 0.4s;
+    transition: top 0.2s;
 
 }
 
@@ -207,8 +209,27 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: center !important;
-        margin-left: 25%;
+        margin-left: 0%;
         margin-right: 0%;
+        width: 80%;
+    }
+    #rowing-stroke-middle-content {
+        width: 80%;
+        margin: 0;
+    }
+    #boat-classes-middle-content {
+        width: 80%;
+        margin: 0;
+    }
+    .boat-classes-column {
+        box-shadow: none !important;
+        justify-content: center !important;
+        width: 100%;
+    }
+    .boat-classes-list-column {
+        box-shadow: none !important;
+        justify-content: center !important;
+        width: 100%;
     }
     .sport-of-rowing-left-panel {
         display: flex;
@@ -286,6 +307,7 @@ a {
 
 .gear-nav-bottom.show a {
     color: var(--pearl-light);
+    padding: 5px;
 }
 .gear-nav-bottom.show a:hover {
     color: var(--primary-black);
@@ -293,14 +315,4 @@ a {
 #oar-nav {
     /* border-bottom-left-radius: 10px; */
     border-bottom-right-radius: 10px; 
-}
-
-
-.middle-content:before {
-    box-shadow: -15px 0 15px -15px inset !important;
-    left: -15px;
-}
-.middle-content:after {
-    box-shadow: 15px 0 15px -15px inset;
-    right: -15px;
 }
