@@ -1,0 +1,48 @@
+.oar-page {
+  display: flex;
+  flex-direction: row;
+  min-height: 64.25vh;
+}
+
+.oar-header {
+  color: var(--primary-black);
+}
+
+.oar-icon {
+  width: 1300px;
+  height: auto;
+  margin-bottom: 60px;
+}
+
+.oar-interactive {
+  /* background-color: #d9d8dd; */
+  border-radius: 8px;
+  /* padding: 40px; */
+  color: var(--primary-black);
+  text-align: center;
+}
+
+.oar-diagram {
+  margin-top: 60px;
+  transform: scale(0.9);
+}
+
+@media (max-width: 1600px) {
+  .oar-diagram {
+    transform: scale(0.5);
+  }
+}
+@media (max-width: 1200px) {
+  .oar-diagram {
+    transform: scale(0.3);
+    margin-left: -100px;
+  }
+}
+@media (max-width: 900px) {
+  .oar-diagram {
+    transform: scale(0.25);
+    margin-left: -170px;
+  }
+}
+
+/*# sourceMappingURL=oar.css.map */

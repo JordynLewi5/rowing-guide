@@ -1,0 +1,22 @@
+/* FOOTER */
+.default-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    background: var(--secondary-blue-dark);
+    padding: 80px;
+    flex-shrink: 0;
+    color: var(--pearl-light);
+    height: cover;
+    box-shadow: 0 50vh 0 50vh var(--secondary-blue-dark);
+
+
+    ul {
+        list-style: none;
+    }
+}
+

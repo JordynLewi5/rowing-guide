@@ -1,0 +1,38 @@
+.blogs-page {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    padding-bottom: 50px;
+  
+    .blogs-body {
+      a {
+        color: var(--secondary-blue);
+        text-decoration: underline;
+      }
+    }
+  
+    .blogs-header {
+      a {
+        padding-top: 20px;
+        color: var(--secondary-blue);
+        text-decoration: none;
+  
+        &:hover {
+          padding-top: 20px;
+          color: var(--secondary-blue) !important;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  p {
+    font-size: 15px !important;
+  }
+  
+  li {
+    p {
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,21 @@
+.blog-page {
+    display: flex;
+    flex-direction: row;
+    min-height: 64.25vh;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  li {
+    a {
+      color: var(--primary-black);
+  
+      &:hover {
+        color: var(--secondary-blue);
+        text-decoration: underline;
+      }
+    }
+  }
+  

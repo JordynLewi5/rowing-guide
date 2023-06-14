@@ -1,0 +1,125 @@
+.boats-page {
+    display: flex;
+    flex-direction: row;
+  
+    .boats-header {
+      color: var(--primary-black);
+    }
+  
+    /* Carousel */
+    .carousel {
+      justify-content: space-between;
+      border-bottom: 1px solid var(--primary-black);
+      padding-top: 20px;
+    }
+  
+    /* Carousel Controll End */
+    .carousel-controller-panel {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 90px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  
+    .carousel-button {
+      background: transparent;
+      border: none;
+      filter: brightness(10%);
+  
+      &:hover {
+        filter: brightness(30%);
+      }
+  
+      img {
+        background: transparent;
+        border: none;
+        height: 30px;
+        width: auto;
+      }
+    }
+  
+    /* Carousel Controll Panel End */
+  
+    /* Carousel Image Panel */
+    .carousel-image-panel {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .carousel-image {
+      box-shadow: 0px 0px 20px 2px var(--primary-black);
+      transition: all .1s ease-in-out;
+      border-radius: 5px;
+  
+      &:hover {
+        filter: brightness(120%);
+        transform: scale(1.01);
+      }
+    }
+  
+    #carousel-image-center {
+      width: 38%;
+      height: 300px;
+      object-fit: cover;
+      box-shadow: 0px 0px 27px 4px var(--primary-black);
+    }
+  
+    #carousel-image-right, #carousel-image-left {
+      width: 28%;
+      height: 225px;
+      object-fit: cover;
+    }
+    /* Carousel Image Panel End */
+  
+    /* Boat Information */
+    @media (min-width: 1500px) {
+      .boat-information-divs {
+        width: 70%;
+        height: 800px;
+        padding-left: 15%;
+        padding-right: 15%;
+        display: flex;
+        text-align: center;
+      }
+    }
+  
+    @media (max-width: 1500px) {
+      .boat-information-divs {
+        width: 70%;
+        height: 1000px;
+        padding-left: 15%;
+        padding-right: 15%;
+        display: flex;
+        text-align: center;
+      }
+    }
+  
+    @media (max-width: 1000px) {
+      .boat-information-divs {
+        width: 70%;
+        height: 1300px;
+        padding-left: 15%;
+        padding-right: 15%;
+        display: flex;
+        text-align: center;
+      }
+    }
+  
+    @media (max-width: 700px) {
+      .boat-information-divs {
+        width: 70%;
+        height: 1700px;
+        padding-left: 15%;
+        padding-right: 15%;
+        display: flex;
+        text-align: center;
+      }
+    }
+  }
+  

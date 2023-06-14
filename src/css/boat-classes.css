@@ -1,0 +1,110 @@
+.boats-page {
+  display: flex;
+  flex-direction: row;
+  /* Carousel */
+  /* Carousel Controll End */
+  /* Carousel Controll Panel End */
+  /* Carousel Image Panel */
+  /* Carousel Image Panel End */
+  /* Boat Information */
+}
+.boats-page .boats-header {
+  color: var(--primary-black);
+}
+.boats-page .carousel {
+  justify-content: space-between;
+  border-bottom: 1px solid var(--primary-black);
+  padding-top: 20px;
+}
+.boats-page .carousel-controller-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 90px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.boats-page .carousel-button {
+  background: transparent;
+  border: none;
+  filter: brightness(10%);
+}
+.boats-page .carousel-button:hover {
+  filter: brightness(30%);
+}
+.boats-page .carousel-button img {
+  background: transparent;
+  border: none;
+  height: 30px;
+  width: auto;
+}
+.boats-page .carousel-image-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.boats-page .carousel-image {
+  box-shadow: 0px 0px 20px 2px var(--primary-black);
+  transition: all 0.1s ease-in-out;
+  border-radius: 5px;
+}
+.boats-page .carousel-image:hover {
+  filter: brightness(120%);
+  transform: scale(1.01);
+}
+.boats-page #carousel-image-center {
+  width: 38%;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0px 0px 27px 4px var(--primary-black);
+}
+.boats-page #carousel-image-right, .boats-page #carousel-image-left {
+  width: 28%;
+  height: 225px;
+  object-fit: cover;
+}
+@media (min-width: 1500px) {
+  .boats-page .boat-information-divs {
+    width: 70%;
+    height: 800px;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    text-align: center;
+  }
+}
+@media (max-width: 1500px) {
+  .boats-page .boat-information-divs {
+    width: 70%;
+    height: 1000px;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    text-align: center;
+  }
+}
+@media (max-width: 1000px) {
+  .boats-page .boat-information-divs {
+    width: 70%;
+    height: 1300px;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    text-align: center;
+  }
+}
+@media (max-width: 700px) {
+  .boats-page .boat-information-divs {
+    width: 70%;
+    height: 1700px;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=boat-classes.css.map */

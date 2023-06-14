@@ -1,0 +1,197 @@
+.body {
+    /* top: 10rem; */
+    z-index: 0;
+    margin-top: 100vh;
+    padding-top: 0px !important;
+}
+
+.top-image-landing-page {
+    /* margin-top: -514px; */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("/src/media/images/riggers.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    z-index: -1;
+
+    img {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+/* CONTENT */
+.sport-of-rowing {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    /* box-shadow: 0px 0px 10px -5px var(--pearl-light); */
+}
+
+.rowing-stroke {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    /* box-shadow: 0px 0px 30px 5px var(--pearl-light); */
+}
+
+.boat-classes {
+    justify-content: space-between;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+#boat-classes-content,
+#sport-of-rowing-middle-content,
+.boat-classes-content {
+    display: flex;
+    flex-direction: row;
+}
+
+#sport-of-rowing-middle-content {
+    gap: 5%;
+    overflow-wrap: normal;
+}
+
+#boat-classes-middle-content {
+    justify-content: center;
+}
+
+/* BOAT CLASSES */
+.boat-classes-two-column-table {
+    /* background-color: var(--primary-black); */
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    border-radius: 2px;
+    min-width: 100%;
+    background-color: none;
+}
+
+.boat-classes-list-column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 550px;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width:  100%;
+        height: 320px;
+    }
+}
+
+/* PANELS */
+.sport-of-rowing-left-panel {
+    p {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.sport-of-rowing-right-panel {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    img {
+        width: 100%;
+        min-width: 300px;
+        border-radius: 3px;;
+    }
+}
+
+/* IMAGES */
+.rowing-stroke-bottom-panel img {
+    width: 100%;
+    height: auto;
+}
+
+.boat-classes-title-uppercase {
+    font-size: 2em;
+    margin: 0px;
+    min-width: 250px;
+    width: 100%;
+    color: var(--primary-black);
+}
+
+.boat-classes-column-title {
+    color: var(--primary-black);
+    padding: 20px;
+}
+
+.boat-classes-column {
+    margin: 5px;
+    
+}
+
+.boat-class-item {
+    margin-bottom: 150px;
+    height: 475px;
+    justify-content: space-between;
+
+    p {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    h4 {
+        margin: 0px;
+    }
+}
+
+.section-headers {
+    background: linear-gradient(90deg, #0d0d3f 25%, #070746 30%, #070534 60%,#21123a 87%);
+    // background-color: var(--primary-black);
+    color: var(--pearl-light);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 3px #1111117f;
+    z-index: 1;
+}
+
+.section-headers-uppercase {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1296px) {
+    #sport-of-rowing-middle-content {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .boat-classes-column {
+        display: flex;
+        flex-direction: column;
+        box-shadow: none !important;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boat-classes-list-column {
+        width: 100%;
+        
+        img {
+            width:  100%;
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+}
