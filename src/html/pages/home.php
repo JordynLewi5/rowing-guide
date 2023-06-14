@@ -5,34 +5,17 @@
         <title>Project 1</title>
         <meta name="description" content="Project 1 description">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/src/pages/css/home.css">
-        <link rel="stylesheet" href="/src/pages/css/shared.css">
+        <link rel="stylesheet" href="/src/css/home.css">
+        <link rel="stylesheet" href="/src/css/shared.css">
+        <link rel="stylesheet" href="/src/css/footer.css">
+        <link rel="stylesheet" href="/src/css/header.css">
+
+        <base href="/project 1/">
 
     </head>
     <body>
         <!-- Start of Header -->
-        <header class="default-header">
-            <div class="header-logo">
-                <a class="nav-item" id="home-nav" href="/src/pages/html/home.html"><img src="/src/media/images/rowing guide logo white intersection.png" style="margin-left:-40px;margin-right:40px"></a>
-            </div>
-            <nav class="header-nav">
-                <div class="header-nav-list">
-                    <a class="nav-item" id="home-nav" href="/src/pages/html/home.html">Home</a>
-                    <a class="nav-item" id="faq-nav" href="/src/pages/html/faq.html">FAQ</a>
-                    <div class="gear-nav-dropdown">
-                        <div class="gear-nav-top">
-                            <a class="nav-item" id="gear-nav">Gear</a>
-                        </div>
-                        <div class="gear-nav-bottom">
-                            <a id="boats-nav" href="/src/pages/html/gear/boat-classes.html">Boats Classes</a>
-                            <a id="oar-nav" href="/src/pages/html/gear/oar.html">The Oar</a>
-                        </div>
-                    </div>
-                    <a class="nav-item" id="blog-nav" href="/src/pages/html/blog.html">Blog</a>
-                    <a class="nav-item" id="contact-nav" href="/src/pages/html/contact.html">Contact</a>
-                </div>
-            </nav>
-        </header>
+        <?php require 'C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\src\html\components\header.php';?>
         <!-- End of Header -->
         <!------------------------------------------------------------------------------------------------>
         <!-- Start of Home page content -->
@@ -40,6 +23,7 @@
         <div class="top-image-landing-page">
             <!-- <img src="/src/media/images/riggers.jpg" alt="Image of gunwall of a quad rowing shell with hands and oar of rowers."> -->
         </div>
+        
         <!-- End of Section 1 -->
         <div class="body">
             <!-- Section 2 - THE SPORT OF ROWING -->
@@ -86,7 +70,7 @@
                         <div class="rowing-stroke-top-panel">
                             <p>The rowing stroke consists of different phases. It starts at the catch position where the rower's knees are bent, shins vertical, body leaned forward, and arms extended forward with oar blades in the water.</p>
                             <br>
-                            <p>From there, the rower initiates the drive phase. They begin by explosively pushing with their legs, extending them fully. As the legs finish extending, the rower swings their torso backward from the hips while maintaining a straight back. This transfers the power from the legs to the upper body. Finally, the rower pulls the oar handle towards their body using their arms and shoulders, propelling the boat forward.</p>
+                            <p>From there, the rower initiates the drive phase. They begin by explosively pushing with their legs, extending them fully. As the legs finish extending, the rower swings their torso backward from the hips while maintaining a straight back. This transfers the power from the legs to the upper body. Finally, the rower pulls the oar handle towards their body using their arms, propelling the boat forward.</p>
                             <br>
                             <p>Once the rower has completed the drive phase, they reach the finish position. Here, the legs are fully extended, the body leans back slightly, and the oar blades are lifted out of the water. </p>
                             <br>

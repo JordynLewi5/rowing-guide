@@ -5,34 +5,15 @@
         <title>Project 1</title>
         <meta name="description" content="Project 1 description">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/src/pages/css/oar.css">
-        <link rel="stylesheet" href="/src/pages/css/shared.css">
-
+        <link rel="stylesheet" href="/src/css/oar.css">
+        <link rel="stylesheet" href="/src/css/shared.css">
+        <link rel="stylesheet" href="/src/css/footer.css">
+        <link rel="stylesheet" href="/src/css/header.css">
     </head>
     <body>
         <!-- Start of Header -->
-        <header class="default-header">
-            <div class="header-logo">
-                <a class="nav-item" id="home-nav" href="/src/pages/html/home.html"><img src="/src/media/images/rowing guide logo white intersection.png" style="margin-left:-40px;margin-right:40px"></a>
-            </div>
-            <nav class="header-nav">
-                <div class="header-nav-list">
-                    <a class="nav-item" id="home-nav" href="/src/pages/html/home.html">Home</a>
-                    <a class="nav-item" id="faq-nav" href="/src/pages/html/faq.html">FAQ</a>
-                    <div class="gear-nav-dropdown">
-                        <div class="gear-nav-top">
-                            <a class="nav-item" id="gear-nav">Gear</a>
-                        </div>
-                        <div class="gear-nav-bottom">
-                            <a id="boats-nav" href="/src/pages/html/gear/boat-classes.html">Boats Classes</a>
-                            <a id="oar-nav" href="/src/pages/html/gear/oar.html">The Oar</a>
-                        </div>
-                    </div>
-                    <a class="nav-item" id="blog-nav" href="/src/pages/html/blog.html">Blog</a>
-                    <a class="nav-item" id="contact-nav" href="/src/pages/html/contact.html">Contact</a>
-                </div>
-            </nav>
-        </header>
+        <?php require 'C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\src\html\components\header.php';?>
+
         <!-- End of Header -->
         <!-- Start of Gear body -->
         <div class="body">
@@ -41,7 +22,7 @@
                 <!-- Gear List Section -->
                 <div class="middle-content">
                     <div class="oar-header">
-                        <h1 class="uppercase">The Oar</h1>
+                        <h1 class="uppercase top-margin">The Oar</h1>
                     </div>
                     <div class="oar-interactive">
                         <div class="oar-diagram">
