@@ -1,20 +1,21 @@
 /* COLOR VARIABLES */
 :root {
-    --primary-black: #17171a;
-    --secondary-gold: #FED600;
-    --secondary-gold-dark: #f19c1c;
-    --secondary-blue: #070766;
-    --secondary-blue-dark: #020024;
-    --pearl-light: #f2eeee;
-  }
-  
-  /* TYPOGRAPHY */
-  @font-face {
-    font-family: bahnschrift;
-    src: url(https://fonts.cdnfonts.com/css/bahnschrift);
-  }
-  
-  body {
+  --primary-black: #17171a;
+  --secondary-gold: #FED600;
+  --secondary-gold-dark: #f19c1c;
+  --secondary-blue: #070766;
+  --secondary-blue-dark: #020024;
+  --pearl-light: #f2eeee;
+  --platinum: #d3cfcf;
+}
+
+/* TYPOGRAPHY */
+@font-face {
+  font-family: bahnschrift;
+  src: url(https://fonts.cdnfonts.com/css/bahnschrift);
+}
+
+body {
     font-family: 'bahnschrift', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Helvetica, Arial, sans-serif;
     margin: 0px;
     overflow: scroll;

@@ -1,126 +1,120 @@
 .default-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    background: linear-gradient(90deg, #080839e9 10%, #08084c 30%, #020024 80%, #150d23 95%);
-    background-color: var(--primary-black);
-    opacity: 98%;
-    box-shadow: 0px 0px 10px 3px #1111117f;
-    height: 114px;
-    z-index: 1;
-    color: var(--pearl-light);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    transition: top 0.2s;
-  }
-  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(90deg, #080839e9 10%, #08084c 30%, #020024 80%, #150d23 95%);
+  background-color: var(--primary-black);
+  opacity: 0.98;
+  box-shadow: 0px 0px 10px 3px #1111117f;
+  height: 114px;
+  z-index: 1;
+  color: var(--pearl-light);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.2s;
+
   #home-nav {
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
   }
-  
+
   #contact-nav {
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
   }
-  
+
   .nav-item {
     padding-top: 5px;
     padding-bottom: 5px;
   }
-  
+
   .header-nav-list {
     display: flex;
     flex-direction: row;
     list-style: none;
     border-radius: 100px;
+
+    a {
+      overflow: hidden;
+      border-radius: 0;
+      max-width: 100%;
+      color: var(--pearl-light);
+      padding-left: 9px;
+      padding-right: 9px;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--primary-black);
+        background-color: var(--secondary-gold);
+      }
+
+      &:active {
+        color: var(--pearl-light);
+        background-color: var(--secondary-gold-dark);
+      }
+    }
   }
-  
-  .header-nav-list a {
-    overflow: hidden;
-    border-radius: 0px;
-    max-width: 100%;
-  }
-  
-  .header-nav-list a {
-    color: var(--pearl-light);
-    padding-left: 9px;
-    padding-right: 9px;
-    text-decoration: none;
-  }
-  
-  .header-nav-list a:hover {
-    color: var(--primary-black);
-    background-color: var(--secondary-gold);
-  }
-  
-  .header-nav-list a:active {
-    color: var(--pearl-light);
-    background-color: var(--secondary-gold-dark);
-  }
-  
+
   .gear-nav-top {
     padding-top: 5px;
     padding-bottom: 5px;
   }
-  
+
   .gear-nav-top.show {
     background-color: var(--secondary-gold);
+
+    a {
+      color: var(--primary-black);
+    }
   }
-  
-  .gear-nav-top.show a {
-    color: var(--primary-black);
-  }
-  
+
   .gear-nav-bottom {
-    max-height: 0px;
+    max-height: 0;
     position: absolute;
-    padding: 0px;
+    padding: 0;
     visibility: hidden;
     flex-direction: column;
     width: fit-content;
     transition: max-height 0.1s ease-in;
     border-bottom-right-radius: 10px;
+
+    &.show {
+      max-height: 50px;
+      visibility: visible;
+      display: flex;
+      background-color: var(--secondary-blue);
+
+      a {
+        color: var(--pearl-light);
+
+        &:hover {
+          color: var(--primary-black);
+        }
+      }
+    }
   }
-  
-  .gear-nav-bottom.show {
-    max-height: 50px;
-    visibility: visible;
-    display: flex;
-    background-color: var(--secondary-blue);
-  }
-  
-  .gear-nav-bottom.show a {
-    color: var(--pearl-light);
-    padding: 5px;
-  }
-  
-  .gear-nav-bottom.show a:hover {
-    color: var(--primary-black);
-  }
-  
+
   #oar-nav {
     border-bottom-right-radius: 10px;
   }
-  
+
   @media (min-width: 768px) {
     .header-logo img {
       width: 200px;
       height: auto;
     }
   }
-  
+
   @media (max-width: 768px) {
-    .default-header {
-      height: 80px;
-      font-size: 13px;
-    }
+    height: 80px;
+    font-size: 13px;
+
     .header-logo img {
       width: 130px;
       height: auto;
       padding-left: 40px;
     }
   }
-  
+}
