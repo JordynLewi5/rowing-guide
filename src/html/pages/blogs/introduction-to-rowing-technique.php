@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="/src/css/shared.css">
         <link rel="stylesheet" href="/src/css/footer.css">
         <link rel="stylesheet" href="/src/css/header.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     </head>
     <body>
         <!-- Start of Header -->
@@ -18,16 +19,17 @@
         <!-- Start of Contact body -->
         <div class="body">
             <div class="blogs-page">
-                <div class="left-sidebar"></div>
+                <div class="col-md-2 col-1"></div>
 
                 <div class="middle-content">
                     <div class="blogs-header">
                         <p><a href="/src/html/pages/blog.php">Back to Blogs</a></p>
-                        <p>June 16, 2023 | By Jordyn Lewis</p>
+                        <p class="date-author">June 16, 2023 | By Jordyn Lewis</p>
+
                         <h1 class="uppercase">Introduction to Rowing Technique</h1>
                     </div>
                     <div class="blogs-body">
-                        <img src="/src/media/images/technique.jpg" style="width:100%">
+                        <img class="blog-image" src="/src/media/images/technique.jpg" style="width:100%">
                         <h2>The Sequence</h2>
                         <p>The rowing stroke consists of different phases. It starts at the catch position where the rower's knees are bent, shins vertical, body leaned forward, and arms extended forward with oar blades in the water.</p>
                         <p>From there, the rower initiates the drive phase. They begin by explosively pushing with their legs, extending them fully. As the legs finish extending, the rower swings their torso backward from the hips while maintaining a straight back. This transfers the power from the legs to the upper body. Finally, the rower pulls the oar handle towards their body using their arms, propelling the boat forward.</p>
@@ -100,20 +102,15 @@
                     </div>
                 </div>
 
-                <div class="right-sidebar"></div>
+                <div class="col-md-2 col-1"></div>
             </div>
         </div>
         <!-- End of Contact body -->
         <!-- Start of Footer -->
-        <footer class="default-footer">
-            <ul>
-                <li>Jordyn Lewis</li>
-                <li>(C) 2023</li>
-            </ul>
-        </footer>
+        <?php require 'C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\src\html\components\footer.php';?>
         <!-- End of Footer -->
         <script src="/src/scripts/jquery.js"></script>
-        <!-- Code -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>        
         <script src="/src/scripts/dropdown-nav.js"></script>
         <script src="/src/scripts/scroll-to-top.js"></script>
 

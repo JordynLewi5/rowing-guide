@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="/src/css/shared.css">
         <link rel="stylesheet" href="/src/css/footer.css">
         <link rel="stylesheet" href="/src/css/header.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     </head>
     <body>
         <!-- Start of Header -->
@@ -18,11 +19,11 @@
         <!-- Start of Contact body -->
         <div class="body">
             <div class="contact-page">
-                <div class="left-sidebar"></div>
+                <div class="col-md-2 col-1"></div>
 
-                <div class="middle-content">
+                <div class="middle-content w-100">
                     <div class="contact-header">
-                        <h1 class="uppercase top-margin">Contact</h1>
+                        <h1 class="uppercase mt-4">Contact</h1>
                     </div>
                     <div class="contact-body">
                         <form action="">
@@ -36,20 +37,15 @@
                     </div>
                 </div>
 
-                <div class="right-sidebar"></div>
+                <div class="col-md-2 col-1"></div>
             </div>
         </div>
         <!-- End of Contact body -->
         <!-- Start of Footer -->
-        <footer class="default-footer">
-            <ul>
-                <li>Jordyn Lewis</li>
-                <li>(C) 2023</li>
-            </ul>
-        </footer>
+        <?php require 'C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\src\html\components\footer.php';?>
         <!-- End of Footer -->
         <script src="/src/scripts/jquery.js"></script>
-        <!-- Code -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>        
         <script src="/src/scripts/dropdown-nav.js"></script>
         <script src="/src/scripts/scroll-to-top.js"></script>
         

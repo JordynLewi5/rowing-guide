@@ -9,25 +9,26 @@
         <link rel="stylesheet" href="/src/css/shared.css">
         <link rel="stylesheet" href="/src/css/footer.css">
         <link rel="stylesheet" href="/src/css/header.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     </head>
     <body>
         <!-- Start of Header -->
         <?php require 'C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\src\html\components\header.php';?>
-
         <!-- End of Header -->
         <!-- Start of Contact body -->
         <div class="body">
             <div class="blogs-page">
-                <div class="left-sidebar"></div>
+                <div class="col-md-2 col-1"></div>
 
                 <div class="middle-content">
                     <div class="blogs-header">
                         <a href="/src/html/pages/blog.php">Back to Blogs</a>
-                        <p>June 16, 2023 | By Jordyn Lewis</p>
+                        <p class="date-author">June 16, 2023 | By Jordyn Lewis</p>
+
                         <h1 class="uppercase">Drills</h1>
                     </div>
                     <div class="blogs-body">
-                        <img src="/src/media/images/drills.jpg" style="width:100%">
+                        <img class="blog-image" src="/src/media/images/drills.jpg" style="width:100%">
                         <p>Drills are important for emphasizing proper form and timing, make sure you ensure the rowers apply these drills to their actual rowing.</p>
                         <h3>Reverse Pick Drill (Erg & Water Drill)</h3>
                         <p>This drill works on separating out the drive sequence into its 3 main components. Begin from the catch and have your rowers row with legs only on the square. It is extremely important that the rowers are able to do this while maintaining a constant forward body position with their arms fully extended. It also helps to remind them that it will feel very strange and that it, in fact, should feel strange. After around 20 strokes, have them add in the body portion for another 20 strokes. Then add in arms for 20 more strokes and finally, have them add in the feather.</p>
@@ -69,20 +70,15 @@
                     </div>
                 </div>
 
-                <div class="right-sidebar"></div>
+                <div class="col-md-2 col-1"></div>
             </div>
         </div>
         <!-- End of Contact body -->
         <!-- Start of Footer -->
-        <footer class="default-footer">
-            <ul>
-                <li>Jordyn Lewis</li>
-                <li>(C) 2023</li>
-            </ul>
-        </footer>
+        <?php require 'C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\src\html\components\footer.php';?>
         <!-- End of Footer -->
         <script src="/src/scripts/jquery.js"></script>
-        <!-- Code -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>        
         <script src="/src/scripts/dropdown-nav.js"></script>
         <script src="/src/scripts/scroll-to-top.js"></script>
         <script>

@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="/src/css/shared.css">
         <link rel="stylesheet" href="/src/css/footer.css">
         <link rel="stylesheet" href="/src/css/header.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     </head>
     <body>
         <!-- Start of Header -->
@@ -18,11 +19,11 @@
         <!-- Start of Gear body -->
         <div class="body">
             <div class="oar-page">
-                <div class="left-sidebar"></div>
+                <div class="col-md-2 col-1"></div>
                 <!-- Gear List Section -->
-                <div class="middle-content">
+                <div class="middle-content w-100">
                     <div class="oar-header">
-                        <h1 class="uppercase top-margin">The Oar</h1>
+                        <h1 class="uppercase mt-4">The Oar</h1>
                     </div>
                     <div class="oar-interactive">
                         <div class="oar-diagram">
@@ -74,16 +75,11 @@
                     </div>
                 <!-- End of Gear List Section -->
             </div>
-            <div class="right-sidebar"></div>
+            <div class="col-md-2 col-1"></div>
 
         </div>
         <!-- Start of Footer -->
-        <footer class="default-footer">
-            <ul>
-                <li>Jordyn Lewis</li>
-                <li>(C) 2023</li>
-            </ul>
-        </footer>
+        <?php require 'C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\src\html\components\footer.php';?>
         <!-- End of Footer -->
 
         <!--------------------------------------------------------------->
@@ -91,8 +87,11 @@
         <!--------------------------------------------------------------->
 
         <script src="/src/scripts/jquery.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="/src/scripts/dropdown-nav.js"></script>
+        <script src="/src/scripts/scroll-to-top.js"></script>        <script src="/src/scripts/dropdown-nav.js"></script>
+        <script src="/src/scripts/scroll-to-top.js"></script>
 
-        <!-- Code -->
         <script>
             // Oar Diagram
             $('.oar-information').hide();
@@ -103,29 +102,7 @@
                 $(`#${$(this).attr('id')}-info`).show();
             });
             // End of Oar Diagram
-            $(document).ready(function() {
-                let prevScrollPos = $(window).scrollTop();
-                let headerHideMargin = 120;
-                $(window).on("scroll", function() {
-                    let currentScrollPos = $(window).scrollTop();
-                    if (currentScrollPos - prevScrollPos < -headerHideMargin) {
-                        $(".default-header").css("top", "0");
-                        prevScrollPos = currentScrollPos;
-                    } else if (currentScrollPos - prevScrollPos > headerHideMargin) {
-                        $(".default-header").css("top", "-114px");
-                        prevScrollPos = currentScrollPos;
-                    }
-                });
-            });
-            // Gear Nav
-            $('.gear-nav-dropdown').on('mouseenter', function() {
-                $('.gear-nav-bottom').toggleClass('show');
-                $('.gear-nav-top').toggleClass('show');
-            }) .on('mouseleave', function() {
-                $('.gear-nav-bottom').toggleClass('show');
-                $('.gear-nav-top').toggleClass('show');
-            }) 
-            // End of Gear Nav
+
         </script>
     </body>
 </html>

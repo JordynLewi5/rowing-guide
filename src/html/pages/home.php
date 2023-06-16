@@ -9,9 +9,7 @@
         <link rel="stylesheet" href="/src/css/shared.css">
         <link rel="stylesheet" href="/src/css/footer.css">
         <link rel="stylesheet" href="/src/css/header.css">
-
-        <base href="/project 1/">
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     </head>
     <body>
         <!-- Start of Header -->
@@ -36,7 +34,7 @@
                 <!-- This will be flex display -->
                 <div class="sport-of-rowing" id="sport-of-rowing-content">
 
-                    <div class="left-sidebar" id="sport-of-rowing-left-sidebar"></div>
+                    <div class="col-md-2 col-1" id="sport-of-rowing-col-md-2 col-1"></div>
 
                     <!-- This is the good stuff -->
                     <div class="middle-content" id="sport-of-rowing-middle-content">
@@ -49,7 +47,7 @@
                     </div>
                     <!-- End of the good stuff -->
 
-                    <div class="right-sidebar" id="sport-of-rowing-right-sidebar"></div>
+                    <div class="col-md-2 col-1" id="sport-of-rowing-col-md-2 col-1"></div>
                 </div>
             </div>
             <!-- End of Section 2 -->
@@ -63,10 +61,10 @@
                 </div>
                 <!-- This will be flex display again -->
                 <div class="rowing-stroke" id="rowing-stroke-content">
-                    <div class="left-sidebar" id="rowing-stroke-left-sidebar"></div>
+                    <div class="col-md-2 col-1" id="rowing-stroke-col-md-2 col-1"></div>
 
                     <!-- This is the good stuff again -->
-                    <div class="middle-content" id="rowing-stroke-middle-content">
+                    <div class="middle-content w-100" id="rowing-stroke-middle-content">
                         <div class="rowing-stroke-top-panel">
                             <p>The rowing stroke consists of different phases. It starts at the catch position where the rower's knees are bent, shins vertical, body leaned forward, and arms extended forward with oar blades in the water.</p>
                             <br>
@@ -75,13 +73,15 @@
                             <p>Once the rower has completed the drive phase, they reach the finish position. Here, the legs are fully extended, the body leans back slightly, and the oar blades are lifted out of the water. </p>
                             <br>
                             <p>To prepare for the next stroke, the rower enters the recovery phase. It involves extending the arms forward, swinging the body forward from the hips while keeping the back straight, sliding the seat up the slide by bending the knees, and finally reaching the catch position again to start the cycle anew.</p>
+                        </div>
                         <div class="rowing-stroke-bottom-panel">
-                            <img src="/src/media/images/kiwipair.jpg">
+                            <img class="rounded-3" src="/src/media/images/kiwipair.jpg">
                         </div>
                     </div>
+                    <div class="col-md-2 col-1" id="rowing-stroke-col-md-2 col-1"></div>
+
                     <!-- End of the good stuff -->
 
-                    <div class="right-sidebar" id="rowing-stroke-right-sidebar"></div>
                 </div>
             </div>
             <!-- End of Section 3 -->
@@ -94,12 +94,12 @@
                 </div>
                 <!-- This will be flex display again -->
                 <div class="boat-classes" id="boat-classes-content">
-                    <div class="left-sidebar" id="boat-classes-left-sidebar"></div>
+                    <div class="col-md-2 col-1" id="boat-classes-col-md-2 col-1"></div>
 
                     <!-- This is the good stuff again -->
                     <div class="middle-content" id="boat-classes-middle-content">
                         <!-- flex display and row direction row -->
-                        <div class="boat-classes-two-column-table">
+                        <div class="boat-classes-two-column-table w-100">
                             <!-- column 1 -->
                             <div class="boat-classes-column" id="boat-classes-column-scull">
                                 <div class="boat-classes-column-title">
@@ -109,19 +109,24 @@
                                 </div>
                                 <div class="boat-classes-list-column">
                                     <div class="boat-class-item" id="single-scull">
-                                        <h4>Single (1x)</h4>
-                                        <p>The Single is arguably the most challenging boat to master and compete in with a waterline width of less than 1 foot. These boats typically measure between 25 and 30 feet in length.</p>
+                                        <div class="boat-class-item-description">
+                                            <h4>Single (1x)</h4>
+                                            <p>The Single is arguably the most challenging boat to master and compete in with a waterline width of less than 1 foot. These boats typically measure between 25 and 30 feet in length.</p>
+                                        </div>
                                         <img src="/src/media/images/single.jpg">
                                     </div>
                                     <div class="boat-class-item" id="double-scull">
-                                        <h4>Double (2x)</h4>
-                                        <p>The Double is a rowing boat designed for two rowers, with each rower using two oar simultaneously. These boats typically measure between 30 and 34 feet in length.</p>   
+                                        <div class="boat-class-item-description">
+                                            <h4>Double (2x)</h4>
+                                            <p>The Double is a rowing boat designed for two rowers, with each rower using two oar simultaneously. These boats typically measure between 30 and 34 feet in length.</p>   
+                                        </div>
                                         <img src="/src/media/images/double.jpg">
-
                                     </div>
                                     <div class="boat-class-item" id="quad-scull">
-                                        <h4>Quadruple (4x)</h4>
-                                        <p>The Quadruple, also known as the "Quad" is a rowing boat designed for four rowers, with each rower using two oar simultaneously. These boats typically measure between 36 and 42 feet in length.</p>
+                                        <div class="boat-class-item-description">
+                                            <h4>Quadruple (4x)</h4>
+                                            <p>The Quadruple, also known as the "Quad" is a rowing boat designed for four rowers, with each rower using two oar simultaneously. These boats typically measure between 36 and 42 feet in length.</p>
+                                        </div>
                                         <img src="/src/media/images/quad.jpg">
                                     </div>
                                 </div>
@@ -135,19 +140,24 @@
                                 </div>
                                 <div class="boat-classes-list-column">
                                     <div class="boat-class-item" id="pair-sweep">
-                                        <h4>Pair (2-)</h4>
-                                        <p>The Pair is a rowing boat designed for two rowers, with each rower using a single oar. These boats typically measure between 32 and 34 feet in length, offering a compact and agile platform for rowing.</p>
+                                        <div class="boat-class-item-description">
+                                            <h4>Pair (2-)</h4>
+                                            <p>The Pair is a rowing boat designed for two rowers, with each rower using a single oar. These boats typically measure between 32 and 34 feet in length, offering a compact and agile platform for rowing.</p>
+                                        </div>
                                         <img src="/src/media/images/pair.jpg">
                                     </div>
                                     <div class="boat-class-item" id="four-sweep">
-                                        <h4>Four (4-/+)</h4>
-                                        <p>The Four is a rowing boat designed for four rowers, with each rower using a single oar. These boats typically measure between 39 and 44 feet in length. The main difference between a 4+ and a 4- is that a 4+ includes a coxswain, while a 4- does not.</p>
+                                        <div class="boat-class-item-description">
+                                            <h4>Four (4-/+)</h4>
+                                            <p>The Four is a rowing boat designed for four rowers, with each rower using a single oar. These boats typically measure between 39 and 44 feet in length. The main difference between a 4+ and a 4- is that a 4+ includes a coxswain, while a 4- does not.</p>
+                                        </div>
                                         <img src="/src/media/images/four.jpg">
-
                                     </div>
                                     <div class="boat-class-item" id="eight-sweep">
-                                        <h4>Eight (8+)</h4>
-                                        <p>The Eight is a rowing boat designed for eight rowers, with each rower using a single oar. These boats typically measure between 55 and 65 feet in length. It is steered by a single coxswain who sits at the stern of the boat. This is the largest class of rowing shells.</p>
+                                        <div class="boat-class-item-description">
+                                            <h4>Eight (8+)</h4>
+                                            <p>The Eight is a rowing boat designed for eight rowers, with each rower using a single oar. These boats typically measure between 55 and 65 feet in length. It is steered by a single coxswain who sits at the stern of the boat. This is the largest class of rowing shells.</p>
+                                        </div>
                                         <img src="/src/media/images/eight.jpg">
                                     </div>
                                 </div>
@@ -156,7 +166,7 @@
                     </div>
                     <!-- End of the good stuff -->
 
-                    <div class="right-sidebar" id="boat-classes-right-sidebar"></div>
+                    <div class="col-md-2 col-1" id="boat-classes-col-md-2 col-1"></div>
                 </div>
             </div>
             <!-- End of Section 4 -->
@@ -164,12 +174,7 @@
         <!-- End of Home page content -->
 
         <!-- Start of Footer -->
-        <footer class="default-footer">
-            <ul>
-                <li>Jordyn Lewis</li>
-                <li>(C) 2023</li>
-            </ul>
-        </footer>
+        <?php require 'C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\src\html\components\footer.php';?>
         <!-- End of Footer -->
 
         <!--------------------------------------------------------------->
@@ -177,10 +182,9 @@
         <!--------------------------------------------------------------->
 
         <script src="/src/scripts/jquery.js"></script>
-        <!-- Code -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
         <script src="/src/scripts/dropdown-nav.js"></script>
-        <script src="/src/scripts/scroll-to-top.js"></script>
-        
+        <script src="/src/scripts/scroll-to-top.js"></script>        
         <script>
         </script>
     </body>

@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="/src/css/shared.css">
         <link rel="stylesheet" href="/src/css/footer.css">
         <link rel="stylesheet" href="/src/css/header.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     </head>
     <body>
         <!-- Start of Header -->
@@ -18,16 +19,17 @@
         <!-- Start of Contact body -->
         <div class="body">
             <div class="blogs-page">
-                <div class="left-sidebar"></div>
+                <div class="col-md-2 col-1"></div>
 
                 <div class="middle-content">
                     <div class="blogs-header">
                         <a href="/src/html/pages/blog.php">Back to Blogs</a>
-                        <p>June 16, 2023 | By Jordyn Lewis</p>
+                        <p class="date-author">June 16, 2023 | By Jordyn Lewis</p>
+
                         <h1 class="uppercase">Common Errors</h1>
                     </div>
                     <div class="blogs-body">
-                        <img src="/src/media/images/common-errors.jpg" style="width:100%">
+                        <img class="blog-image" src="/src/media/images/common-errors.jpg" style="width:100%">
                         <h3>Handle Heights (on the water)</h3>
                         <p>When rowing on the water, the height at which your rowers hold the handles is extremely important as it determines the stability and balance of the boat. If the boat is not balanced, it will list to one side, forcing the oars to drag across the water. One way to manage this is to have your rowers imagine they are gliding their hands across a tabletop.</p>
                         <h3>Early Back Swing (on the erg and water)</h3>
@@ -43,20 +45,15 @@
                     </div>
                 </div>
 
-                <div class="right-sidebar"></div>
+                <div class="col-md-2 col-1"></div>
             </div>
         </div>
         <!-- End of Contact body -->
         <!-- Start of Footer -->
-        <footer class="default-footer">
-            <ul>
-                <li>Jordyn Lewis</li>
-                <li>(C) 2023</li>
-            </ul>
-        </footer>
+        <?php require 'C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\src\html\components\footer.php';?>
         <!-- End of Footer -->
         <script src="/src/scripts/jquery.js"></script>
-        <!-- Code -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>        
         <script src="/src/scripts/dropdown-nav.js"></script>
         <script src="/src/scripts/scroll-to-top.js"></script>
         <script>            

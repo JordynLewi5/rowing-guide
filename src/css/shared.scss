@@ -60,13 +60,13 @@ body {
     min-height: 64.25vh;
   }
   
-  .left-sidebar {
-    width: 20%;
-  }
+  // .col-md-2 col-1 {
+  //   width: 20%;
+  // }
   
-  .right-sidebar {
-    width: 20%;
-  }
+  // .col-md-2 col-1 {
+  //   width: 20%;
+  // }
   
   .middle-content {
     width: 60%;
@@ -106,13 +106,13 @@ body {
   }
   
   @media (max-width: 768px) {
-    .left-sidebar {
-      width: 10%;
-    }
+    // .col-md-2 col-1 {
+    //   width: 10%;
+    // }
   
-    .right-sidebar {
-      width: 10%;
-    }
+    // .col-md-2 col-1 {
+    //   width: 10%;
+    // }
   
     #sport-of-rowing-middle-content {
       display: flex;
@@ -158,3 +158,6 @@ body {
     margin-top: 20px;
   }
   
+  .bottom-margin {
+    margin-bottom: 20px;
+  }

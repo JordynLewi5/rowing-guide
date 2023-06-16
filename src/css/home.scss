@@ -44,7 +44,7 @@
 .boat-classes {
     justify-content: space-between;
     margin-top: 70px;
-    margin-bottom: 70px;
+    padding-bottom: 70px;
 }
 
 #boat-classes-content,
@@ -71,7 +71,6 @@
     text-align: center;
     justify-content:center;
     flex-wrap: wrap;
-    margin-top: 20px;
     border-radius: 2px;
     min-width: 100%;
     // background-color: none;
@@ -84,6 +83,7 @@
     width: 550px;
     justify-content: center;
     align-items: center;
+    margin: 0px;
 
     .boat-class-item {
         max-height: 300px;

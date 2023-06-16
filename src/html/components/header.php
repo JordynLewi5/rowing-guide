@@ -16,9 +16,9 @@
                     <div class="gear-nav-top">
                         <a class="nav-item" id="gear-nav">Gear</a>
                     </div>
-                    <div class="gear-nav-bottom">
-                        <a id="boats-nav" href="/src/html/pages/gear/boat-classes.php">Boats Classes</a>
-                        <a id="oar-nav" href="/src/html/pages/gear/oar.php">The Oar</a>
+                    <div class="gear-nav-bottom h-fit">
+                        <a class="d-flex d-inline-block p-2" id="boats-nav" href="/src/html/pages/gear/boat-classes.php">Boats Classes</a>
+                        <a class="d-flex d-inline-block p-2" id="oar-nav" href="/src/html/pages/gear/oar.php">The Oar</a>
                     </div>
                 </div>
                 <a class="nav-item" id="blog-nav" href="/src/html/pages/blog.php">Blog</a>

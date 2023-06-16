@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="/src/css/shared.css">
         <link rel="stylesheet" href="/src/css/footer.css">
         <link rel="stylesheet" href="/src/css/header.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
     </head>
     <body>
         <!-- Start of Header -->
@@ -19,26 +22,45 @@
         <!-- Start of Gear body -->
         <div class="body">
             <div class="boats-page">
-                <div class="left-sidebar"></div>
+                <div class="col-md-2 col-1"></div>
                 <!-- Gear List Section -->
-                <div class="middle-content">
+                <div class="middle-content w-100">
                     <div class="boats-header">
-                        <h1 class="uppercase top-margin">Boat Classes</h1>
-                    </div>              
-                      <!--  -->
-                    <div class="carousel">
-                        <div class="carousel-image-panel">                            
-                            <img class="carousel-image" id="carousel-image-left" src="/src/media/images/boat6.jpg">
-                            <img class="carousel-image" id="carousel-image-center" src="/src/media/images/boat1.jpg">
-                            <img class="carousel-image"id="carousel-image-right" src="/src/media/images/boat2.jpg">
+                        <h1 class="uppercase mt-4">Boat Classes</h1>
+                    </div>          
 
+                    <div id="carousel" class="carousel slide border-0 pt-0" data-ride="carousel">
+                        <div class="carousel-inner rounded-3">
+                            <div class="carousel-item active">
+                                <img class="d-block" src="/src/media/images/boat1.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block" src="/src/media/images/boat2.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block" src="/src/media/images/boat3.jpg" alt="Third slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block" src="/src/media/images/boat4.jpg" alt="Fourth slide">
+                            </div>w-fit-content
+                            <div class="carousel-item">
+                                <img class="d-block" src="/src/media/images/boat5.jpg" alt="Fifth slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block" src="/src/media/images/boat6.jpg" alt="Sixth slide">
+                            </div>
                         </div>
-                        <div class="carousel-controller-panel">
-                            <button class="carousel-button" id="carousel-button-left"><image src="/src/media/images/left-arrow.png"></button>
-                            <button class="carousel-button" id="carousel-button-right"><image src="/src/media/images/right-arrow.png"></button>
-                        </div>
+                        <a class="carousel-control-prev bg-dark no-drag" href="#carousel" role="button" data-slide="prev" onclick="event.preventDefault()">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next bg-dark no-drag" href="#carousel" role="button" data-slide="next" onclick="event.preventDefault()">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
                     </div>
-                    <div class="boat-information-divs">
+
+
+
+                    <div class="boat-information-divs pt-4">
                         <div class="boat-information" id="1-info">
                             <h2 class="uppercase">Single (1x)</h2>
                             <p>The single in rowing refers to a specific type of rowing boat designed for a single rower. It is also commonly known as a "single scull."</p>
@@ -93,16 +115,11 @@
                 </div>
                 <!-- End of Gear List Section -->
 
-                <div class="right-sidebar"></div>
+                <div class="col-md-2 col-1"></div>
             </div>
         </div>
         <!-- Start of Footer -->
-        <footer class="default-footer">
-            <ul>
-                <li>Jordyn Lewis</li>
-                <li>(C) 2023</li>
-            </ul>
-        </footer>
+        <?php require 'C:\Users\jlewi\OneDrive\Desktop\Kinetic Projects\Project 1\src\html\components\footer.php';?>
         <!-- End of Footer -->
 
         <!--------------------------------------------------------------->
@@ -110,72 +127,62 @@
         <!--------------------------------------------------------------->
 
         <script src="/src/scripts/jquery.js"></script>
-
-        <!-- Code -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="/src/scripts/dropdown-nav.js"></script>
+        <script src="/src/scripts/scroll-to-top.js"></script>
         <script>
             let carouselIndex = 1;
             let imageCount = 6;
-
+            let transitioning = false;
             // Reset the boat info descriptions
             $('.boat-information').hide();
             $(`#${carouselIndex}-info`).show();
 
             // Carousel
-            $('#carousel-button-left, #carousel-image-left').click(function() {
+            $('.carousel-control-prev').click(function() {
+                if (transitioning) return;
+                transitioning = true;
+                $('.carousel').carousel('prev');
                 carouselIndex = (carouselIndex > 1 ? --carouselIndex : imageCount);
-                updateCarouselImage();
                 updateBoatDescriptions();
             })
-            $('#carousel-button-right, #carousel-image-right').click(function() {
+            $('.carousel-control-next').click(function() {
+                if (transitioning) return;
+                transitioning = true;
+                $('.carousel').carousel('next');
                 carouselIndex = (carouselIndex < 6 ? ++carouselIndex : 1);
-                updateCarouselImage();
                 updateBoatDescriptions();
             })
+            
+            $('.carousel').on('slid.bs.carousel', function () {
+                // Check if the carousel is still transitioning
+                if (!$('.carousel').hasClass('carousel-sliding')) {
+                    transitioning = false;
+                }
+            });
+
+            
             // End of Carousel
 
-            // Header
-            $(document).ready(function() {
-                let prevScrollPos = $(window).scrollTop();
-                let headerHideMargin = 120;
-                $(window).on("scroll", function() {
-                    let currentScrollPos = $(window).scrollTop();
-                    if (currentScrollPos - prevScrollPos < -headerHideMargin) {
-                        $(".default-header").css("top", "0");
-                        prevScrollPos = currentScrollPos;
-                    } else if (currentScrollPos - prevScrollPos > headerHideMargin) {
-                        $(".default-header").css("top", "-114px");
-                        prevScrollPos = currentScrollPos;
-                    }
-                });
-            });
-            $('.gear-nav-dropdown').on('mouseenter', function() {
-                $('.gear-nav-bottom').addClass('show');
-                $('.gear-nav-top').addClass('show');
-
-            })
-            .on('mouseleave', function() {
-                $('.gear-nav-bottom').removeClass('show');
-                $('.gear-nav-top').removeClass('show');
-            }) 
-            // End of Header
-
-            // Functions
-            function updateCarouselImage() {                
-                // update left image
-                let imagePath = '/src/media/images/boat' + (carouselIndex > 1 ? carouselIndex - 1 : imageCount) + '.jpg';
-                $('#carousel-image-left').attr('src', imagePath);
-                // update center image
-                imagePath = '/src/media/images/boat' + carouselIndex + '.jpg';
-                $('#carousel-image-center').attr('src', imagePath);
-                // update right image
-                imagePath = '/src/media/images/boat' + (carouselIndex < 6 ? carouselIndex + 1 : 1) + '.jpg';
-                $('#carousel-image-right').attr('src', imagePath);
-            }
-
+            // Functions 
             function updateBoatDescriptions() {
                 $('.boat-information').hide();
                 $(`#${carouselIndex}-info`).show();
             }
+            
+            // function updateCarouselImages() {
+            //     // update left image
+            //     let imagePath = '/src/media/images/boat' + (carouselIndex > 1 ? carouselIndex - 1 : imageCount) + '.jpg';
+            //     $('#carousel-image-left').attr('src', imagePath);
+            //     // update center image
+            //     imagePath = '/src/media/images/boat' + carouselIndex + '.jpg';
+            //     $('#carousel-image-center').attr('src', imagePath);
+            //     // update right image
+            //     imagePath = '/src/media/images/boat' + (carouselIndex < 6 ? carouselIndex + 1 : 1) + '.jpg';
+            //     $('#carousel-image-right').attr('src', imagePath);
+            // }
+
+           
         </script>
     </body>
 </html>
